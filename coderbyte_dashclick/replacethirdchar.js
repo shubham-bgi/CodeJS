@@ -1,0 +1,1 @@
+data = data.replace(/(..)./g, "$1X")//replaces third char of data string to 'X'
