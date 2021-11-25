@@ -1,0 +1,103 @@
+MULTIPLE CHOICE QUESTIONS
+
+What will the following JavaScript code output?
+for (var i = 0; i < 3; i++) {
+  setTimeout(function() { alert(i); }, 1000 + i);
+}
+
+Number 0 alerted 3 times CORRECT
+Number 3 alerted three times
+Numbers 1, 2, 3 alerted
+undefined
+
+
+What will the following JavaScript code output?
+(function() {
+  var a = b = 5;
+})();
+
+console.log(b);
+
+undefined
+5 CORRECT
+null
+ReferenceError: b is not defined
+
+
+The basic common operations on a Stack are:
+
+Push, Remove
+Insert, Search
+Push, Pop, Swap
+Push, Pop, Peek CORRECT
+
+
+What are the common data structures used for BFS and DFS in graph?
+
+Trie/Array
+Queue/Stack
+Queue/Linked list CORRECT
+Stack/Trees
+
+
+Which of the following traversal sequences can be used to construct a binary tree?
+Inorder & Level-order CORRECT
+Preorder & Level-order
+Postorder & Preorder
+Postorder & Level-order
+
+
+The first step of Heap sort is to:
+
+Convert the heap to a tree
+Compress the heap
+Remove the largest element from the heap
+Build a max/min heap CORRECT
+
+
+Dijkstra's shortest path algorithm is not able to account for what graph properties?
+Graphs that are bipartite.
+0 weighted nodes
+A graph with more than 256 nodes
+Negative edge weights CORRECT
+
+
+A degenerate binary tree will have the performance of what other data structure?
+A bipartite graph
+A hash table
+An array with holes
+A linked list CORRECT
+
+
+
+OPEN-ENDED QUESTIONS
+
+What is the difference between git merge and git rebase?
+git rebase moves a feature branch into a master, whereas git merge adds a new commit, preserving the history.
+
+How do you find a list of files that have been changed in a particular commit?
+To find out which files have been changed in a given commit, use the `git log --raw` command.
+
+What is the process to revert a commit that has already has been pushed and made public?
+Commands you need to put to revert a commit that has been pushed are 
+1) git reset --hard HEAD~1 
+2) git push -f
+
+What is Denormalization in databases?
+The process of adding precomputed redundant data to an otherwise normalized relational database to improve the read performance of the database is called denormalization of the database
+
+What are some of the different types of indexes in SQL?
+ Clustered and Non-Clustered Index
+
+What is the difference between the DELETE and TRUNCATE commands in SQL?
+In the TRUNCATE command, the transaction log for each deleted data page is recorded unlike the DELETE command, we cannot roll back the data after using the TRUNCATE command.
+
+What is a constraint in SQL?
+Constraints in SQL servers are predefined rules and restrictions that are enforced in a single column or multiple columns regarding the values allowed in the columns to maintain the accuracy and reliability of the data.
+
+What is the difference between a Clustered and Non-Clustered Index?
+A clustered index defines the order in which data is physically stored in a table, whereas non clustered index is an index structure separate from the data stored in a table that reorders one or more selected columns.
+
+What does the following SQL query do?
+SELECT RIGHT(Studentname, 5) as Studentname from student
+Extract 5 characters from Studentname from the right.
