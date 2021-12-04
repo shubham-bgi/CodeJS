@@ -5,7 +5,7 @@
 
 //{[(])} false
 
-function isBalanced(str){
+/*function isBalanced(str){
     let firstHalf = '';
     for(let i=0; i< str.length; i++){
         if(
@@ -35,7 +35,27 @@ function isBalanced(str){
             }
         }
     }
+}*/
+
+function isBalanced(str){
+    let brackets = '{}[]()<>';
+    let brackedIndex;
+    let string1 = str;
+    for(let i=0; i< string1.length; i++){
+        
+        if( string1[i] === '}' && string1[i-1] === '{' ){
+            string1 = string1.slice(0, i-1) + string1.slice(i+1);
+            i -= 2;
+        }else if( string1[i] === ']' && string1[i-1] === '[' ){
+            string1 = string1.slice(0, i-1) + string1.slice(i+1);
+            i -=2;
+        }else if( string1[i] === ')' && string1[i-1] === '(' ){
+            string1 = string1.slice(0, i-1) + string1.slice(i+1);
+            i -= 2;
+        }
+    }
+    return string1.length == 0
 }
 
 //isBalanced('{[()]}');
-console.log(isBalanced('{[([({))]}}'));
+console.log(isBalanced('{[(])}'));
